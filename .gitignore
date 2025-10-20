@@ -1,0 +1,31 @@
+# Sensitive configuration files
+config/R6Check.private.ps1
+tools/launch-remote-scan.ps1
+
+# Windows system files
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# VS Code settings
+.vscode/
+
+# PowerShell debug files
+*.psess
+*.vsp
+*.vspx
+
+# Logs and reports
+*.log
+*.html
+*.txt
+
+# Temporary files
+*.tmp
+*.temp
+~*
+
+# Distribution/build artifacts
+*.zip
+dist/
+build/
