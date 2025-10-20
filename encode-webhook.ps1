@@ -36,17 +36,6 @@ Write-Host ""
 Write-Host "Send this command to suspects (copy everything):" -ForegroundColor Yellow
 Write-Host ""
 
-$oneLiner = "irm https://raw.githubusercontent.com/dyvertigo/R6Check/main/R6Check.ps1 | iex; R6Check.ps1 -WebhookHash `"$encodedHash`""
-
-Write-Host $oneLiner -ForegroundColor Green
-Write-Host ""
-
-
-Write-Host "================================================" -ForegroundColor Cyan
-Write-Host "  SHORTER VERSION (Download & Run)" -ForegroundColor Cyan
-Write-Host "================================================" -ForegroundColor Cyan
-Write-Host ""
-
 $shortVersion = "iwr https://raw.githubusercontent.com/dyvertigo/R6Check/main/R6Check.ps1 -OutFile R6Check.ps1; .\R6Check.ps1 -WebhookHash `"$encodedHash`""
 
 Write-Host $shortVersion -ForegroundColor Green
@@ -54,7 +43,7 @@ Write-Host ""
 
 
 try {
-    $oneLiner | Set-Clipboard
+    $shortVersion | Set-Clipboard
     Write-Host "[+] One-line command copied to clipboard!" -ForegroundColor Green
 } catch {
     Write-Host "[~] Could not copy to clipboard (copy manually above)" -ForegroundColor Yellow

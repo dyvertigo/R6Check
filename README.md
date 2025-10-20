@@ -15,8 +15,7 @@ R6Check focuses on Rainbow Six Siege environments. It checks for DMA devices and
 
 - Detection‑only: never deletes, blocks, or quarantines.
 - Local‑first: no external connections by default.
-- Privacy‑minded: report is anonymized and saved only on your Desktop.
-
+- Privacy‑minded: report is saved only on your Desktop.
 
 
 ## Features
@@ -86,7 +85,6 @@ Notes:
 ## Output
 
 - One HTML file on your Desktop: `SystemCheckReport.html`.
-- The report header avoids including your Windows username/computer name.
 - No separate text logs are produced by default.
 
 ## FAQ
