@@ -10,7 +10,7 @@
 
 
 
-## 🔒 Security
+## Security
 
 **How Safe Is This?**
 
@@ -28,7 +28,7 @@
 
 
 
-## 📝 Example Usage
+## Example Usage
 
 **Your Side (One Time):**
 
@@ -53,7 +53,7 @@ irm https://raw.githubusercontent.com/dyvertigo/R6Check/main/R6Check.ps1 | iex; 
 
 
 
-## 🎯 Complete Workflow
+## Complete Workflow
 
 ```
 ┌─────────────┐

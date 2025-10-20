@@ -50,7 +50,7 @@ R6Check focuses on Rainbow Six Siege environments. It checks for DMA devices and
 ### *Simple 3-Step Process:*
 
 1. **Download**
-   - Go to your GitHub: `https://github.com/dyvertigo/R6Check`
+   - Go to: `https://github.com/dyvertigo/R6Check`
    - Click the green "Code" button → "Download ZIP"
 
 
