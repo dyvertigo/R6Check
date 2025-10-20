@@ -885,7 +885,12 @@ function Send-DiscordLogFile {
 
     if (-not $global:MaxAttachSizeMB -or $global:MaxAttachSizeMB -le 0) { $global:MaxAttachSizeMB = 8 }
 
-    Write-Host "[>] Using Discord webhook: $($discordWebhookUrl -replace 'https://discord.com/api/webhooks/','WEBHOOK:')"
+    $maskedWebhook = if ($discordWebhookUrl -match 'https://discord\.com/api/webhooks/(\d+)/(.+)') {
+        "WEBHOOK:$($matches[1].Substring(0, [Math]::Min(8, $matches[1].Length)))********/********"
+    } else {
+        "WEBHOOK:********"
+    }
+    Write-Host "[>] Using Discord webhook: $maskedWebhook"
 
     if (-not $Files -or $Files.Count -eq 0) {
         $desktopPath = [System.Environment]::GetFolderPath('Desktop')
@@ -967,7 +972,12 @@ function Set-DiscordWebhook {
 
         if ($script:DiscordWebhookUrl -and $script:DiscordWebhookUrl.Trim()) {
             $global:DiscordWebhookUrl = $script:DiscordWebhookUrl.Trim()
-            $masked = $global:DiscordWebhookUrl -replace 'https://discord.com/api/webhooks/','WEBHOOK:'
+            # Properly mask the webhook URL - only show first 8 chars of webhook ID
+            $masked = if ($global:DiscordWebhookUrl -match 'https://discord\.com/api/webhooks/(\d+)/(.+)') {
+                "WEBHOOK:$($matches[1].Substring(0, [Math]::Min(8, $matches[1].Length)))********/********"
+            } else {
+                "WEBHOOK:********"
+            }
             Write-Host "[+] Using webhook from command-line parameter ($masked)" -ForegroundColor Green
         } else {
             Write-Host "[~] No Discord webhook configured (parameter not supplied)." -ForegroundColor DarkYellow
