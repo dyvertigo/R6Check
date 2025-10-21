@@ -18,32 +18,6 @@ R6Check focuses on Rainbow Six Siege environments. It checks for DMA devices and
 - Privacy‑minded: report is saved only on your Desktop.
 
 
-## Features
-
-- DMA detection suite
-  - PCIe/USB devices (kmBoxNet, PCILeech, Screamer, etc.)
-  - Related drivers and services
-  - Running processes and common firmware flashing utilities
-  - Spoofed device names/IDs
-- Process and file signals
-  - Cheat/injector patterns in process names and paths
-  - Common red‑team tools
-  - Suspicious files in common user locations
-- Network indicators
-  - Established TCP connections with port context and process mapping
-  - Highlights suspicious remotes and tooling‑like behavior
-- System/persistence checks
-  - Secure Boot status
-  - Windows install date
-  - BAM State User Settings and Prefetch entries (execution hints)
-  - Recently installed programs
-  - Suspicious scheduled tasks
-  - Suspicious drivers by name/display patterns
-- R6‑specific artifacts
-  - Enumerates Rainbow Six Siege usernames from save paths
-- Unified report and scoring
-  - Single HTML with per‑section findings and a lightweight risk summary
-
 ## How To Use R6Check 
 
 ### *Simple 3-Step Process:*
@@ -86,6 +60,33 @@ Notes:
 
 - One HTML file on your Desktop: `SystemCheckReport.html`.
 - No separate text logs are produced by default.
+
+## Features
+
+- DMA detection suite
+  - PCIe/USB devices (kmBoxNet, PCILeech, Screamer, etc.)
+  - Related drivers and services
+  - Running processes and common firmware flashing utilities
+  - Spoofed device names/IDs
+- Process and file signals
+  - Cheat/injector patterns in process names and paths
+  - Common red‑team tools
+  - Suspicious files in common user locations
+- Network indicators
+  - Established TCP connections with port context and process mapping
+  - Highlights suspicious remotes and tooling‑like behavior
+- System/persistence checks
+  - Secure Boot status
+  - Windows install date
+  - BAM State User Settings and Prefetch entries (execution hints)
+  - Recently installed programs
+  - Suspicious scheduled tasks
+  - Suspicious drivers by name/display patterns
+- R6‑specific artifacts
+  - Enumerates Rainbow Six Siege usernames from save paths
+- Unified report and scoring
+  - Single HTML with per‑section findings and a lightweight risk summary
+
 
 ## FAQ
 
